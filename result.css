@@ -1,0 +1,67 @@
+/* static/styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #ffffff;
+    color: #2986cc;
+    text-align: center;
+    padding: 20px 0;
+}
+h1 {
+    background-color: #6aa84f;
+    color: white;
+}
+
+main {
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+label, input, button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #6aa84f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px; /* Adjust the width as needed */
+    margin-right: 10px; /* Add margin to create space between the logo and the tagline */
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.result {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.result h2 {
+    margin-bottom: 5px;
+}
+
+.result a {
+    color: #007bff;
+}
