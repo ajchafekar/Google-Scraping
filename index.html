@@ -1,0 +1,31 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraping Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='company_logo.png') }}" alt="Company Logo">
+        </div>
+        <h1>Welcome to Web Scraping Application</h1>
+        <h2>Efficiently maange your search database</h2>
+    </header>
+    <main>
+        <div class="container">
+            <img src="{{ url_for('static', filename='main_image.jpg') }}" alt="Main Image">
+            <form action="/scrape" method="post">
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+                <label for="num_results">Number of Results:</label>
+                <input type="number" id="num_results" name="num_results" value="10">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

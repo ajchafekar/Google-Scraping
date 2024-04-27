@@ -1,0 +1,35 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Search Results</h1>
+    </header>
+    <main>
+        <div class="container">
+            {% if search_results %}
+                <h2>Data Scraped Successfully</h2>
+                <p>Data has been scraped and saved to the database.</p>
+                <div class="results">
+                    {% for result in search_results %}
+                    <div class="result">
+                        <h3>{{ result.title }}</h3>
+                        <p><a href="{{ result.url }}">{{ result.url }}</a></p>
+                        <p>{{ result.snippet }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <h2>Error</h2>
+                <p>Failed to scrape data. Please try again later.</p>
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>
